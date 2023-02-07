@@ -1,0 +1,17 @@
+h1{
+  font-size: x-large; height: 100px;
+}
+
+main{
+  border-color: black; background-color: azure; height: 700 px;
+  width: 500px;
+}
+
+ul{
+  border-color: black; border-spacing: 10px;
+  height: 400px;
+  width: 150px; text-align:left;
+
+  border: 2px solid #8696a2;
+  float: left;
+}
