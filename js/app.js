@@ -63,12 +63,14 @@ for (let i = 0; i < 4; i++) {
     alert("Too low");
   } else if (q6num > 5) {
     alert("Too high");
-  } else {
+  } else if (q6num === 5) {
     alert("Correct!");
     score++;
     break;
-
+  } else {
+    alert("not a number. Try again.");
   }
+
 }
 
 alert('The correct answer is 5.');
