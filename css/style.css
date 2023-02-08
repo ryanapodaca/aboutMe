@@ -15,3 +15,7 @@ ul{
   border: 2px solid #8696a2;
   float: left;
 }
+
+ol{
+  text-align: left; max-width: 100px;
+}
