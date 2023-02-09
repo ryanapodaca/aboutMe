@@ -56,33 +56,47 @@ if (q5 === 'yes' || q5 === 'y') {
   alert('Sorry, you\'re incorrect');
 }
 
-for (let i = 0; i < 4; i++) {
-  let q6 = prompt('Guess a number that I am thinking of. You have four tries.');
-  let q6num = parseInt(q6);
-  if (q6num < 5) {
-    alert("Too low");
-  } else if (q6num > 5) {
-    alert("Too high");
-  } else if (q6num === 5) {
-    alert("Correct!");
-    score++;
-    break;
-  } else {
-    alert("not a number. Try again.");
+function guessingGame(a){
+  for (let i = 0; i < 4; i++) {
+    let myNum = a;
+    let q6 = prompt('Guess a number that I am thinking of. You have four tries.');
+    let q6num = parseInt(q6);
+    if (q6num < myNum) {
+      alert("Too low");
+    }
+    else if (q6num > myNum) {
+      alert("Too high");
+    }
+    else if (q6num === myNum) {
+      alert("Correct!");
+      score++;
+      break;
+    }
+    else {
+      alert("not a number. Try again.");
+    }
+    if (i === 3) {
+      alert("out of attempts");
+    }
   }
-
+  alert('The correct answer is 5.');
 }
+guessingGame(5);
 
-alert('The correct answer is 5.');
+
+
 
 let brands = ['gibson', 'mcpherson', 'fender', 'd\'angelico', 'duesenburg', 'abasi', 'taylor', 'martin', 'g&l', 'carvin'];
 
 for (let i = 0; i < 6; i++) {
   let q7 = prompt('Name one of my favorite guitar brands, you have 6 tries.').toLowerCase();
 
-  for (let i = 0; i < brands.length; i++){
-    if(brands[i] === q7){
+  for (let j = 0; j < brands.length; j++){
+    if(brands[j] === q7){
       q7 = true;
+//alert
+//i = 5
+//break;
     }else{
       q7 = false;
     }
@@ -94,6 +108,7 @@ for (let i = 0; i < 6; i++) {
   } else {
     alert("wrong.");
   }
+  alert('Here are some of my fave guitar brands ${brands}');
 }
 
 alert("Thank you for your answers, " + username + ". Your score is " + score + " out of 7.");
